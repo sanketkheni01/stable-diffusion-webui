@@ -27,10 +27,10 @@ then
 fi
 
 # Name of the subdirectory (defaults to stable-diffusion-webui)
-if [[ -z "${clone_dir}" ]]
-then
-    clone_dir="stable-diffusion-webui"
-fi
+# if [[ -z "${clone_dir}" ]]
+# then
+#     clone_dir="stable-diffusion-webui"
+# fi
 
 # python3 executable
 if [[ -z "${python_cmd}" ]]
@@ -56,7 +56,7 @@ then
 fi
 
 # this script cannot be run as root by default
-can_run_as_root=0
+can_run_as_root=1
 
 # read any command line flags to the webui.sh script
 while getopts "f" flag > /dev/null 2>&1
@@ -102,14 +102,14 @@ then
     exit 1
 fi
 
-if [[ -d .git ]]
-then
-    printf "\n%s\n" "${delimiter}"
-    printf "Repo already cloned, using it as install directory"
-    printf "\n%s\n" "${delimiter}"
-    install_dir="${PWD}/../"
-    clone_dir="${PWD##*/}"
-fi
+# if [[ -d .git ]]
+# then
+#     printf "\n%s\n" "${delimiter}"
+#     printf "Repo already cloned, using it as install directory"
+#     printf "\n%s\n" "${delimiter}"
+#     install_dir="${PWD}/../"
+#     clone_dir="${PWD##*/}"
+# fi
 
 # Check prerequisites
 gpu_info=$(lspci 2>/dev/null | grep -E "VGA|Display")
@@ -119,7 +119,7 @@ case "$gpu_info" in
         if [[ -z "${TORCH_COMMAND}" ]]
         then
             pyv="$(${python_cmd} -c 'import sys; print(".".join(map(str, sys.version_info[0:2])))')"
-            if [[ $(bc <<< "$pyv <= 3.10") -eq 1 ]] 
+            if [[ $(bc <<< "$pyv <= 3.10") -eq 1 ]]
             then
                 # Navi users will still use torch 1.13 because 2.0 does not seem to work.
                 export TORCH_COMMAND="pip install torch==1.13.1+rocm5.2 torchvision==0.14.1+rocm5.2 --index-url https://download.pytorch.org/whl/rocm5.2"
@@ -147,63 +147,63 @@ then
     fi
 fi
 
-for preq in "${GIT}" "${python_cmd}"
-do
-    if ! hash "${preq}" &>/dev/null
-    then
-        printf "\n%s\n" "${delimiter}"
-        printf "\e[1m\e[31mERROR: %s is not installed, aborting...\e[0m" "${preq}"
-        printf "\n%s\n" "${delimiter}"
-        exit 1
-    fi
-done
+# for preq in "${GIT}" "${python_cmd}"
+# do
+#     if ! hash "${preq}" &>/dev/null
+#     then
+#         printf "\n%s\n" "${delimiter}"
+#         printf "\e[1m\e[31mERROR: %s is not installed, aborting...\e[0m" "${preq}"
+#         printf "\n%s\n" "${delimiter}"
+#         exit 1
+#     fi
+# done
 
-if ! "${python_cmd}" -c "import venv" &>/dev/null
-then
-    printf "\n%s\n" "${delimiter}"
-    printf "\e[1m\e[31mERROR: python3-venv is not installed, aborting...\e[0m"
-    printf "\n%s\n" "${delimiter}"
-    exit 1
-fi
+# if ! "${python_cmd}" -c "import venv" &>/dev/null
+# then
+#     printf "\n%s\n" "${delimiter}"
+#     printf "\e[1m\e[31mERROR: python3-venv is not installed, aborting...\e[0m"
+#     printf "\n%s\n" "${delimiter}"
+#     exit 1
+# fi
 
-cd "${install_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/, aborting...\e[0m" "${install_dir}"; exit 1; }
-if [[ -d "${clone_dir}" ]]
-then
-    cd "${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
-else
-    printf "\n%s\n" "${delimiter}"
-    printf "Clone stable-diffusion-webui"
-    printf "\n%s\n" "${delimiter}"
-    "${GIT}" clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git "${clone_dir}"
-    cd "${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
-fi
+# cd "${install_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/, aborting...\e[0m" "${install_dir}"; exit 1; }
+# if [[ -d "${clone_dir}" ]]
+# then
+#     cd "${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
+# else
+#     printf "\n%s\n" "${delimiter}"
+#     printf "Clone stable-diffusion-webui"
+#     printf "\n%s\n" "${delimiter}"
+#     "${GIT}" clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git "${clone_dir}"
+#     cd "${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
+# fi
 
-if [[ -z "${VIRTUAL_ENV}" ]];
-then
-    printf "\n%s\n" "${delimiter}"
-    printf "Create and activate python venv"
-    printf "\n%s\n" "${delimiter}"
-    cd "${install_dir}"/"${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
-    if [[ ! -d "${venv_dir}" ]]
-    then
-        "${python_cmd}" -m venv "${venv_dir}"
-        first_launch=1
-    fi
-    # shellcheck source=/dev/null
-    if [[ -f "${venv_dir}"/bin/activate ]]
-    then
-        source "${venv_dir}"/bin/activate
-    else
-        printf "\n%s\n" "${delimiter}"
-        printf "\e[1m\e[31mERROR: Cannot activate python venv, aborting...\e[0m"
-        printf "\n%s\n" "${delimiter}"
-        exit 1
-    fi
-else
-    printf "\n%s\n" "${delimiter}"
-    printf "python venv already activate: ${VIRTUAL_ENV}"
-    printf "\n%s\n" "${delimiter}"
-fi
+# if [[ -z "${VIRTUAL_ENV}" ]];
+# then
+#     printf "\n%s\n" "${delimiter}"
+#     printf "Create and activate python venv"
+#     printf "\n%s\n" "${delimiter}"
+#     cd "${install_dir}"/"${clone_dir}"/ || { printf "\e[1m\e[31mERROR: Can't cd to %s/%s/, aborting...\e[0m" "${install_dir}" "${clone_dir}"; exit 1; }
+#     if [[ ! -d "${venv_dir}" ]]
+#     then
+#         "${python_cmd}" -m venv "${venv_dir}"
+#         first_launch=1
+#     fi
+#     # shellcheck source=/dev/null
+#     if [[ -f "${venv_dir}"/bin/activate ]]
+#     then
+#         source "${venv_dir}"/bin/activate
+#     else
+#         printf "\n%s\n" "${delimiter}"
+#         printf "\e[1m\e[31mERROR: Cannot activate python venv, aborting...\e[0m"
+#         printf "\n%s\n" "${delimiter}"
+#         exit 1
+#     fi
+# else
+#     printf "\n%s\n" "${delimiter}"
+#     printf "python venv already activate: ${VIRTUAL_ENV}"
+#     printf "\n%s\n" "${delimiter}"
+# fi
 
 # Try using TCMalloc on Linux
 prepare_tcmalloc() {

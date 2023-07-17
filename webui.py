@@ -388,8 +388,8 @@ def webui():
         gradio_auth_creds = list(get_gradio_auth_creds()) or None
 
         app, local_url, share_url = shared.demo.launch(
-            share=cmd_opts.share,
-            server_name=server_name,
+            share=True,
+            server_name="0.0.0.0",
             server_port=cmd_opts.port,
             ssl_keyfile=cmd_opts.tls_keyfile,
             ssl_certfile=cmd_opts.tls_certfile,

@@ -30,3 +30,8 @@ torch
 torchdiffeq
 torchsde
 transformers==4.25.1
+
+# external
+clip
+open-clip-torch
+#xformers
