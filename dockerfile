@@ -1,4 +1,14 @@
-FROM python:3.10-bullseye
+FROM nvidia/cuda:12.2.0-runtime-ubuntu20.04
+
+# Install Python and pip
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    && add-apt-repository ppa:deadsnakes/ppa \
+    && apt-get update \
+    && apt-get install -y \
+    python3.11 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y git ffmpeg libsm6 libxext6 parallel aria2 libgoogle-perftools-dev
 
