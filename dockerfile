@@ -1,12 +1,11 @@
 FROM nvidia/cuda:12.2.0-runtime-ubuntu20.04
 
-# Install Python and pip
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
     && apt-get install -y \
-    python3.11 \
+    python3.10 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
