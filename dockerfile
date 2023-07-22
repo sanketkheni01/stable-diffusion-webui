@@ -36,7 +36,7 @@ RUN pip install -r ./repositories/CodeFormer/requirements.txt
 RUN chmod +x ./download.sh
 RUN ./download.sh
 
-RUN aria2c -x 5 --dir / --out /xformers-0.0.21.dev544-cp310-cp310-manylinux2014_x86_64.whl 'https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/download/6.0.0/xformers-0.0.21.dev544-cp310-cp310-manylinux2014_x86_64-pytorch201.whl'
+RUN aria2c -x 5 --dir / --out /xformers-0.0.20-cp311-cp311-manylinux2014_x86_64.whl 'https://files.pythonhosted.org/packages/c8/85/a9bfab89e081dea72bc2649745a2ef5dcbe1613bf4b3d82c53a4ee62f396/xformers-0.0.20-cp311-cp311-manylinux2014_x86_64.whl'
 RUN pip install /xformers-0.0.20-cp311-cp311-manylinux2014_x86_64.whl
 
 ENV LD_PRELOAD=libtcmalloc.so
