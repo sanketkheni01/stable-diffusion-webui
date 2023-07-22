@@ -1,11 +1,12 @@
 FROM nvidia/cuda:12.2.0-runtime-ubuntu20.04
 
+# Install Python and pip
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
     && apt-get install -y \
-    python3.10 \
+    python3.11 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
@@ -36,7 +37,8 @@ RUN chmod +x ./download.sh
 RUN ./download.sh
 
 RUN aria2c -x 5 --dir / --out /xformers-0.0.21.dev544-cp310-cp310-manylinux2014_x86_64.whl 'https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/download/6.0.0/xformers-0.0.21.dev544-cp310-cp310-manylinux2014_x86_64-pytorch201.whl'
-RUN pip install /xformers-0.0.21.dev544-cp310-cp310-manylinux2014_x86_64.whl
+RUN pip install /xformers-0.0.20-cp311-cp311-manylinux2014_x86_64.whl
+
 ENV LD_PRELOAD=libtcmalloc.so
 # COPY webui.sh /app/stable-diffusion-webui/webui.sh
 
