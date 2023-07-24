@@ -1,9 +1,6 @@
-https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt
-  out=Stable-diffusion/v1-5-pruned-emaonly.ckpt
 https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
   out=VAE/vae-ft-mse-840000-ema-pruned.ckpt
-https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
-  out=Stable-diffusion/sd-v1-5-inpainting.ckpt
+
 https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
   out=GFPGAN/GFPGANv1.4.pth
 https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
@@ -14,3 +11,104 @@ https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1
   out=LDSR/project.yaml
 https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1
   out=LDSR/model.ckpt
+https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt
+  out=Stable-diffusion/v2-1_768-ema-pruned.ckpt
+
+
+https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt
+  out=Stable-diffusion/v1-5-pruned-emaonly.ckpt
+https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
+  out=Stable-diffusion/sd-v1-5-inpainting.ckpt
+https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt
+  out=Stable-diffusion/v1-5-pruned-emaonly.ckpt
+https://civitai.com/api/download/models/17233
+  out=Stable-diffusion/abyssorangemix3AOM3_aom3a1b.safetensors
+https://civitai.com/api/download/models/41
+  out=Stable-diffusion/allInOnePixelModel_v1.ckpt
+https://civitai.com/api/download/models/1344
+  out=Stable-diffusion/analogDiffusion_10Safetensors.safetensors
+https://civitai.com/api/download/models/4270
+  out=Stable-diffusion/anygenV37_anygenv37.ckpt
+https://civitai.com/api/download/models/75
+  out=Stable-diffusion/anythingV3_fp16.ckpt
+https://civitai.com/api/download/models/3433
+  out=Stable-diffusion/anythingV3Inpainting_1-inpainting.ckpt
+https://civitai.com/api/download/models/25
+  out=Stable-diffusion/arcaneDiffusion_v3.ckpt
+https://huggingface.co/ogkalu/Comic-Diffusion/resolve/main/comic-diffusion-V2.ckpt
+  out=Stable-diffusion/comic-diffusion-V2.ckpt
+https://civitai.com/api/download/models/74
+  out=Stable-diffusion/complexLineart_v1.ckpt
+https://civitai.com/api/download/models/57618
+  out=Stable-diffusion/CounterfeitV30_v30.safetensors
+https://civitai.com/api/download/models/12183
+  out=Stable-diffusion/ddosmix_V2.safetensors
+https://civitai.com/api/download/models/39
+  out=Stable-diffusion/deepSpaceDiffusion_v1.ckpt
+https://civitai.com/api/download/models/15236
+  out=Stable-diffusion/deliberate_v2.ckpt
+https://civitai.com/api/download/models/7328
+  out=Stable-diffusion/dosmix_.safetensors
+https://civitai.com/api/download/models/109123
+  out=Stable-diffusion/dreamshaper_7.safetensors
+
+
+ https://civitai.com/api/download/models/1450
+  out=Stable-diffusion/elldrethsLucidMix_v10.safetensors
+https://civitai.com/api/download/models/1224
+  out=Stable-diffusion/f222_v1.ckpt
+https://civitai.com/api/download/models/1138
+  out=Stable-diffusion/inkpunkDiffusion_v2.ckpt
+https://huggingface.co/timbrooks/instruct-pix2pix/resolve/main/instruct-pix2pix-00-22000.ckpt
+  out=Stable-diffusion/instruct-pix2pix-00-22000.ckpt
+https://huggingface.co/Fake-Person/A_request/resolve/main/joMadDiffusion_v1.ckpt
+  out=Stable-diffusion/joMadDiffusion_v1.ckpt
+https://civitai.com/api/download/models/119057
+  out=Stable-diffusion/meinamix_meinaV11.safetensors
+https://civitai.com/api/download/models/90
+  out=Stable-diffusion/midjourneyPapercut_v1.ckpt
+https://civitai.com/api/download/models/2298
+  out=Stable-diffusion/modelshootStyle_modelshoot10.ckpt
+https://civitai.com/api/download/models/64094
+  out=Stable-diffusion/neverendingDreamNED_v122BakedVae.safetensors
+
+https://civitai.com/api/download/models/27392
+  out=Stable-diffusion/openjourneyAkaMidJou_v4.ckpt
+https://civitai.com/api/download/models/48
+  out=Stable-diffusion/papercut_v1.ckpt
+https://civitai.com/api/download/models/6297
+  out=Stable-diffusion/pastelMixStylizedAnime_pastelMixPrunedFP16.safetensors
+https://civitai.com/api/download/models/2483
+  out=Stable-diffusion/portrait+1.0.ckpt
+https://civitai.com/api/download/models/4048
+  out=Stable-diffusion/ProtoGen_X3.4.ckpt
+https://civitai.com/api/download/models/8137
+  out=Stable-diffusion/realdosmix_.safetensors
+https://huggingface.co/justin759/realisticVisionV13_v13.safetensors/resolve/main/realisticVisionV13_v13.safetensors
+  out=Stable-diffusion/realisticVisionV13_v13.safetensors
+https://civitai.com/api/download/models/73
+  out=Stable-diffusion/redshiftDiffusion_v1.ckpt
+
+https://civitai.com/api/download/models/4132
+  out=Stable-diffusion/roboeticsMix_rmix01Ckpt.ckpt
+https://huggingface.co/nousr/robo-diffusion/resolve/main/models/robo-diffusion-v1.ckpt
+  out=Stable-diffusion/robo-diffusion-v1.ckpt
+
+https://civitai.com/api/download/models/124626
+  out=Stable-diffusion/RPG-v5.ckpt
+https://civitai.com/api/download/models/1192
+  out=Stable-diffusion/SamDoesArt-V3.ckpt
+https://civitai.com/api/download/models/77
+  out=Stable-diffusion/samdoesartsUltmerge_v1.ckpt
+https://civitai.com/api/download/models/1213
+  out=Stable-diffusion/samDoesSexyBlend_safetensor.safetensors
+https://huggingface.co/ogkalu/Superhero-Diffusion/resolve/main/superhero-diffusion.ckpt
+  out=Stable-diffusion/superhero-diffusion.ckpt
+https://civitai.com/api/download/models/1144
+  out=Stable-diffusion/synthwavePunk_v2.ckpt
+https://civitai.com/api/download/models/1259
+  out=Stable-diffusion/theAllySMix_v10.ckpt
+https://civitai.com/api/download/models/23690
+  out=Stable-diffusion/vinteprotogenmix_V20.safetensors
+
+
