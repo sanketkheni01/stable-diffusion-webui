@@ -13,7 +13,5 @@ echo "Downloading, this might take a while..."
 
 aria2c -x 10 --disable-ipv6 --input-file ./links.txt --dir ./models --continue
 
-cd .extensions
-
-git clone https://github.com/civitai/sd_civitai_extension.git
-git clone https://github.com/imrayya/stable-diffusion-webui-Prompt_Generator.git
+git clone https://github.com/civitai/sd_civitai_extension.git ./extensions/sd_civitai_extension
+git clone https://github.com/imrayya/stable-diffusion-webui-Prompt_Generator.git ./extensions/Prompt_Generator
