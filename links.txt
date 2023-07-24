@@ -33,8 +33,7 @@ https://civitai.com/api/download/models/75
   out=Stable-diffusion/anythingV3_fp16.ckpt
 https://civitai.com/api/download/models/3433
   out=Stable-diffusion/anythingV3Inpainting_1-inpainting.ckpt
-https://civitai.com/api/download/models/25
-  out=Stable-diffusion/arcaneDiffusion_v3.ckpt
+
 https://huggingface.co/ogkalu/Comic-Diffusion/resolve/main/comic-diffusion-V2.ckpt
   out=Stable-diffusion/comic-diffusion-V2.ckpt
 https://civitai.com/api/download/models/74
