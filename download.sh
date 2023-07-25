@@ -18,7 +18,7 @@ git clone https://github.com/imrayya/stable-diffusion-webui-Prompt_Generator.git
 git clone https://github.com/Mikubill/sd-webui-controlnet.git ./extensions/controlnet
 git clone https://github.com/Uminosachi/sd-webui-inpaint-anything.git ./extensions/inpaint-anything
 git clone https://github.com/richrobber2/canvas-zoom.git ./extensions/canvas-zoom
-git clone https://github.com/deforum-art/sd-webui-deforum-art.git ./extensions/deforum
+git clone https://github.com/deforum-art/sd-webui-deforum.git ./extensions/deforum
 git clone https://github.com/s0md3v/sd-webui-roop.git ./extensions/roop
 git clone https://github.com/dustysys/ddetailer.git ./extensions/ddetailer
 git clone https://github.com/fkunn1326/openpose-editor.git ./extensions/openpose-editor
