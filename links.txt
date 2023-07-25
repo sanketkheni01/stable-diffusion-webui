@@ -15,6 +15,40 @@ https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1
 https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt
   out=Stable-diffusion/v2-1_768-ema-pruned.ckpt
 
+https://civitai.com/api/download/models/88158
+  out=Stable-diffusion/rundiffusionFX_v10.safetensors
+
+https://civitai.com/api/download/models/88167
+  out=Stable-diffusion/rundiffusionFX25D_v10.safetensors
+https://civitai.com/api/download/models/108576
+    out=Stable-diffusion/absolutereality_v16.safetensors
+https://civitai.com/api/download/models/99805
+    out=Stable-diffusion/aZovyaPhotoreal_v2.safetensors
+
+https://civitai.com/api/download/models/79290
+    out=Stable-diffusion/aZovyaRPGArtistTools_v3.safetensors
+
+https://civitai.com/api/download/models/17233
+  out=Stable-diffusion/abyssorangemix3AOM3_aom3a1b.safetensors
+https://civitai.com/api/download/models/118118
+  out=Stable-diffusion/abyssorangemix3AOM3_aom3a3.safetensors
+https://civitai.com/api/download/models/78676
+  out=Stable-diffusion/cetusMix_v4.safetensors
+https://civitai.com/api/download/models/117324
+  out=Stable-diffusion/chilloutmix_NiPrunedFp16Fix.safetensors
+https://civitai.com/api/download/models/54461
+  out=Stable-diffusion/crystalClear2_crystalClear2V1.safetensors
+https://civitai.com/api/download/models/60100
+  out=Stable-diffusion/crystalClear_Photorealistic.safetensors
+https://civitai.com/api/download/models/114429
+  out=Stable-diffusion/cyberrealistic_v32.safetensors
+https://civitai.com/api/download/models/69832
+  out=Stable-diffusion/disneyPixarCartoon_v10.safetensors
+https://civitai.com/api/download/models/110021
+  out=Stable-diffusion/dreamshaper_7-inpainting.safetensors
+
+
+
 
 https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
   out=Stable-diffusion/sd-v1-5-inpainting.ckpt
