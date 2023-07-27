@@ -387,6 +387,8 @@ def webui():
 
         gradio_auth_creds = list(get_gradio_auth_creds()) or None
 
+        print(f"Starting UI on :{cmd_opts.port}...")
+
         app, local_url, share_url = shared.demo.launch(
             share=True,
             server_name="0.0.0.0",
