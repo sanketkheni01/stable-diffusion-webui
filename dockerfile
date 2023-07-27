@@ -34,7 +34,7 @@ ENV LD_PRELOAD=libtcmalloc.so
 
 # USER daemon
 
-EXPOSE 7860
+EXPOSE 8080
 
 RUN chmod +x ./webui.sh
 
