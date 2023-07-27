@@ -359,7 +359,7 @@ def api_only():
     modules.script_callbacks.app_started_callback(None, app)
 
     print(f"Startup time: {startup_timer.summary()}.")
-    api.launch(server_name="0.0.0.0" if cmd_opts.listen else "127.0.0.1", port=cmd_opts.port if cmd_opts.port else 7861)
+    api.launch(server_name="0.0.0.0" if cmd_opts.listen else "127.0.0.1", port=cmd_opts.port if cmd_opts.port else 8080)
 
 
 def stop_route(request):
@@ -390,7 +390,7 @@ def webui():
         app, local_url, share_url = shared.demo.launch(
             share=True,
             server_name="0.0.0.0",
-            server_port="8080",
+            server_port=cmd_opts.port,
             ssl_keyfile=cmd_opts.tls_keyfile,
             ssl_certfile=cmd_opts.tls_certfile,
             ssl_verify=cmd_opts.disable_tls_verify,
